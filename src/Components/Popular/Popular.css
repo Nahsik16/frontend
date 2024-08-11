@@ -1,0 +1,62 @@
+
+.popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  gap: 20px; /* Space between items */
+  width: 100%;
+  padding: 20px; /* Add padding to prevent content from touching edges */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.popular h1 {
+  font-size: 26px;
+  color: #171717;
+  font-weight: 600;
+  margin: 0; /* Remove default margin */
+}
+
+.popular hr {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background: #252525;
+  margin: 20px 0; /* Add vertical spacing around the line */
+}
+
+.popular-item {
+  display: flex;
+  flex-direction: row; /* Arrange items horizontally */
+  gap: 30px; /* Space between items */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  width: 100%; /* Full width of the parent container */
+  justify-content: center; /* Center items horizontally */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
+
+.popular-item > * {
+  flex: 0 1 auto; /* Allow items to shrink but not grow beyond their content size */
+  min-width: 200px; /* Adjust minimum width for larger items */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+  margin: 10px; /* Margin around each item */
+}
+
+.popular-item img {
+  width: 100%; /* Scale the image to fit within its container */
+  max-width: 100%; /* Allow image to grow as large as the container allows */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within its container without distortion */
+  display: block; /* Remove any extra spacing around images */
+}
+
+/* Media query for screens 1026px wide and above */
+@media (min-width: 1026px) {
+  .popular-item {
+    gap: 20px; /* Adjust gap for larger screens if needed */
+  }
+
+  .popular-item > * {
+    flex: 0 1 22%; /* Make items larger, 4 items per row */
+    max-width: 22%; /* Ensure items fit 4 per row */
+  }
+}
