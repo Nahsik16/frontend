@@ -1,0 +1,55 @@
+.shop-category-banner {
+  display: block;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.shop-category-indexSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 170px;
+}
+
+.shop-category-sort {
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid #888;
+}
+
+.shop-category-product {
+  display: flex;
+  flex-direction: row; /* Arrange items horizontally */
+  gap: 30px; /* Space between items */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  width: 100%; /* Full width of the parent container */
+  justify-content: center; /* Center items horizontally */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
+
+.shop-category-product > * {
+  flex: 0 1 auto; /* Allow items to shrink but not grow beyond their content size */
+  min-width: 200px; /* Adjust minimum width for larger items */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+  margin: 10px; /* Margin around each item */
+}
+
+.shop-category-product img {
+  width: 100%; /* Scale the image to fit within its container */
+  max-width: 100%; /* Allow image to grow as large as the container allows */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within its container without distortion */
+  display: block; /* Remove any extra spacing around images */
+}
+
+/* Media query for screens 1026px wide and above */
+@media (min-width: 1026px) {
+  .shop-category-product {
+    gap: 20px; /* Adjust gap for larger screens if needed */
+  }
+
+  .shop-category-product > * {
+    flex: 0 1 22%; /* Make items larger, 4 items per row */
+    max-width: 22%; /* Ensure items fit 4 per row */
+  }
+}
