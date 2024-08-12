@@ -6,7 +6,7 @@ import  appstore from '../assets/app_store.png'
 const NewsLetter = () => {
   return (
     <div className='app-download' id='app-download'>
-      <p>For Better Experience Download<br/> Tomato App</p>
+      <p>For Better Experience Download<br/> Shopper App</p>
       <div className='app-download-platforms'>
         <img src={playstore} alt="" />
         <img src={appstore} alt="" />
