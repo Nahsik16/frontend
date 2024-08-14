@@ -41,6 +41,20 @@
   object-fit: contain; /* Ensure the image fits within its container without distortion */
   display: block; /* Remove any extra spacing around images */
 }
+.shopcategory-loadmore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px auto;
+  width :233px;
+  height :69px;
+  border-radius: 75px;
+  background:#d1d1d1;
+  color:#787878;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
 
 /* Media query for screens 1026px wide and above */
 @media (min-width: 1026px) {

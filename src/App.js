@@ -1,6 +1,8 @@
 
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
+import React from 'react';
+import{ useState } from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Shop from './Pages/Shop';
 import ShopCategory from './Pages/ShopCategory';
@@ -13,10 +15,14 @@ import women_banner from './Components/assets/banner_women.png'
 import kid_banner from './Components/assets/banner_kids.png'
 
 function App() {
+  const[showLogin,setShowLogin]= useState(false)
+
   return (
     <div >
       <BrowserRouter>
-      <Navbar/>
+      <>
+      {showLogin?<LoginSignup setShowLogin={setShowLogin}/>:<></>}
+      <Navbar setShowLogin={setShowLogin} />
       <Routes>
         <Route path="/" element={<Shop/>}></Route>
         <Route path="/mens" element={<ShopCategory banner={men_banner} category="men"/>}></Route>
@@ -26,9 +32,10 @@ function App() {
           <Route path=':productId' element={<Product/>}/>
         </Route>
         <Route path='/cart' element={<Cart/>}></Route>
-        <Route path='/login' element={<LoginSignup/>}></Route>
+        <Route path='/login' element={showLogin?<LoginSignup setShowLogin={setShowLogin}/>:<></>}></Route>
       </Routes>
       <Footer/>
+      </>
       </BrowserRouter>    
      
     </div>
