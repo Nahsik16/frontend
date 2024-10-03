@@ -15,10 +15,13 @@ const API = {
             }
 
             const data = await response.json()
+            console.log(data.response)
+
             return data.response // Assuming the FastAPI returns the bot's response in the `response` field
         } catch (error) {
-            console.error("Error fetching chatbot response:", error)
-            throw error
+            return "Testing when api is down"
+            // console.error("Error fetching chatbot response:", error)
+            // throw error
         }
     },
 }
