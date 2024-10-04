@@ -19,7 +19,7 @@ const API = {
 
             return data.response // Assuming the FastAPI returns the bot's response in the `response` field
         } catch (error) {
-            return "Testing when api is down"
+            return "Testing when api is down";
             // console.error("Error fetching chatbot response:", error)
             // throw error
         }
