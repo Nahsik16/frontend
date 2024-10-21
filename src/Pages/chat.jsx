@@ -36,10 +36,12 @@ const Chatbot = () => {
     }
 
     return (
-        <div className="chatbot">
-            <Header />
-            <Messages messages={messages} />
-            <Input onSend={send} />
+        <div>
+            <div className="chatbot">
+                <Header />
+                <Messages messages={messages} />
+                <Input onSend={send} />
+            </div>
         </div>
     )
 }
