@@ -57,7 +57,7 @@ const Navbar = ({ setShowLogin }) => {
                     </Link>
                     {menu === "kids" ? <hr /> : <></>}
                 </li>
-                <li
+                {/* <li
                     onClick={() => {
                         setMenu("chatbot")
                     }}
@@ -66,7 +66,7 @@ const Navbar = ({ setShowLogin }) => {
                         Chatbot
                     </Link>
                     {menu === "kids" ? <hr /> : <></>}
-                </li>
+                </li> */}
             </ul>
             <div className="nav-login-cart">
                 {user ? (

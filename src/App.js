@@ -14,7 +14,6 @@ import women_banner from "./Components/assets/banner_women.png"
 import kid_banner from "./Components/assets/banner_kids.png"
 import Chatbot from "./Pages/chat"
 import useAuth from "./hooks/useAuth" // Import useAuth
-
 function App() {
     const [showLogin, setShowLogin] = useState(false)
     const { user } = useAuth() // Get user from the useAuth hook
@@ -64,6 +63,7 @@ function App() {
                         <Route path="/cart" element={<Cart />}></Route>
                         <Route path="/chat" element={<Chatbot />}></Route>
                     </Routes>
+                    <Chatbot />
                     <Footer />
                 </>
             </BrowserRouter>
