@@ -1,0 +1,158 @@
+/* Main container for the chat interface */
+.chat-ui-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    padding: 32px; /* Increased padding */
+}
+
+/* Title styling */
+.chat-ui-title {
+    font-size: 36px; /* Enlarged font size */
+    font-weight: bold;
+    margin-bottom: 24px; /* Increased margin */
+}
+
+/* Page content */
+.chat-ui-content {
+    font-size: 20px; /* Increased font size for content */
+    margin-bottom: 24px; /* Increased margin */
+}
+
+/* Toggle button for chat (floating button in the corner) */
+.chat-toggle-btn {
+    position: fixed;
+    bottom: 30px; /* Moved further from the bottom */
+    right: 40px; /* Moved further from the right */
+    padding: 30px; /* Increased padding */
+    border-radius: 300% 300% 0% 300%;
+    background-color: #b16db6;
+    color: white;
+    border: none;
+    font-size: 24px; /* Larger button size */
+    cursor: pointer;
+}
+
+.chat-toggle-btn:hover {
+    background-color: #b16db6;
+}
+
+/* Chat box */
+.chat-box {
+    position: fixed;
+    bottom: 100px; /* Increased distance from the bottom */
+    right: 24px; /* Increased distance from the right */
+    width: 600px; /* Increased width */
+    height: 650px; /* Increased height */
+    background-color: white;
+    border-radius: 12px; /* Slightly larger corner radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header of the chat */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px; /* Increased padding */
+    background-color: #b16db6;
+    color: white;
+    font-size: 24px; /* Enlarged header font */
+    border-bottom: 2px solid #ccc;
+    border-radius: 12px 12px 0px 0px;
+}
+
+/* Close button */
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px; /* Enlarged close button */
+    cursor: pointer;
+}
+
+/* Messages container */
+.chat-messages {
+    flex-grow: 1;
+    padding: 24px; /* Increased padding */
+    overflow-y: auto;
+    font-size: 18px; /* Increased font size for messages */
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 100%);
+}
+
+/* Individual chat message */
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px; /* Increased space between messages */
+}
+
+/* Bot message styling */
+.bot-message {
+    justify-content: flex-start;
+}
+
+.bot-avatar {
+    background-color: transparent;
+    padding: 1px 16px; /* Increased padding for the avatar */
+    height: 20px;
+
+    border-radius: 50%;
+    margin-right: 16px; /* Increased margin */
+    font-size: 35px; /* Larger avatar font */
+}
+
+/* User message styling */
+.user-message {
+    justify-content: flex-end;
+}
+
+/* Message text bubble */
+.message-text {
+    background-color: #ab60b1;
+    color: white;
+    padding: 16px; /* Increased padding inside bubbles */
+    border-radius: 12px; /* Larger corner radius */
+    max-width: 80%; /* Slightly wider message bubble */
+    word-wrap: break-word;
+    font-size: 18px; /* Increased font size */
+}
+
+.bot-message .message-text {
+    background-color: #66b160;
+    color: white;
+}
+
+/* Input form at the bottom of the chat */
+.chat-input-form {
+    display: flex;
+    padding: 16px; /* Increased padding */
+    border-top: 2px solid #ccc; /* Thicker border */
+}
+
+/* Chat input box */
+.chat-input {
+    flex-grow: 1;
+    padding: 12px; /* Increased padding */
+    border: 2px solid #ccc; /* Thicker border */
+    border-radius: 8px; /* Larger border radius */
+    margin-right: 16px; /* Increased margin */
+    font-size: 18px; /* Larger input text */
+}
+
+/* Send button */
+.send-btn {
+    background-color: #b16db6;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Increased padding */
+    border-radius: 8px; /* Larger corner radius */
+    cursor: pointer;
+    font-size: 18px; /* Larger send button */
+}
+
+.send-btn:hover {
+    background-color: #b16db6;
+}
